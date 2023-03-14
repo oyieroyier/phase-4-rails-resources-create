@@ -20,6 +20,7 @@ class BirdsController < ApplicationController
   # CREATE /birds
   def create
     bird = Bird.create(creating_bird)
+    render json: bird, status: :created
   end
 
   private
